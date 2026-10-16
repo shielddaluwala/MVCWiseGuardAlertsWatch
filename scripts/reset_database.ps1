@@ -1,4 +1,4 @@
-# reset_database.ps1 — clear the WiseGuardAlertsWatch database.
+# reset_database.ps1 - clear the WiseGuardAlertsWatch database.
 #
 # The app recreates the schema and re-seeds defaults on the next start:
 #   - admin / admin@123 (default admin account)
@@ -12,7 +12,7 @@ $root = Split-Path -Parent $PSScriptRoot
 $db = Join-Path $root 'MVCWiseGuardAlertsWatch\wiseguard.db'
 
 if (-not (Test-Path $db)) {
-    Write-Host "No database found at $db — nothing to clear."
+    Write-Host "No database found at $db - nothing to clear."
     exit 0
 }
 
